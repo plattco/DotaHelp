@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DotaHelp.EntryPage"
+             BackgroundColor="#34495E">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Center" Padding="0,40,0,0">
+                <Image x:Name="logo" Source= "DOTAHelpLogoCenter.png" HorizontalOptions="Center"/>
+                <DatePicker x:Name="date" TextColor="White"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Save PlayerID: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <CheckBox x:Name="playerCheck" WidthRequest="100" CheckedChanged="playerCheck_CheckedChanged"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="PlayerID: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="player" WidthRequest="100"  TextColor="White" TextChanged="player_TextChanged"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="MatchID: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="match" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Hero Played: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Picker x:Name="hero" WidthRequest="100" TextColor="White">
+                        <Picker.Items>
+                            <x:String>Abbadon</x:String>
+                            <x:String>Alchemist</x:String>
+                            <x:String>Ancient Apparition</x:String>
+                            <x:String>Anti Mage</x:String>
+                            <x:String>Arc Warden</x:String>
+                            <x:String>Axe</x:String>
+                            <x:String>Bane</x:String>
+                            <x:String>Batrider</x:String>
+                            <x:String>BeastMaster</x:String>
+                            <x:String>Bloodseeker</x:String>
+                            <x:String>Bounty Hunter</x:String>
+                            <x:String>Brewmaster</x:String>
+                            <x:String>Bristleback</x:String>
+                            <x:String>Broodmother</x:String>
+                            <x:String>Centaur Warruner</x:String>
+                            <x:String>Chaos Knight</x:String>
+                            <x:String>Chen</x:String>
+                            <x:String>Clinkz</x:String>
+                            <x:String>Clockwerk</x:String>
+                            <x:String>Crystal Maiden</x:String>
+                            <x:String>Dark Seer</x:String>
+                            <x:String>Dark Willow</x:String>
+                            <x:String>Dazzle</x:String>
+                            <x:String>Death Prophet</x:String>
+                            <x:String>Disruptor</x:String>
+                            <x:String>Doom</x:String>
+                            <x:String>Dragon Knight</x:String>
+                            <x:String>Drow Ranger</x:String>
+                            <x:String>Earth Spirit</x:String>
+                            <x:String>Earthshaker</x:String>
+                            <x:String>Elder Titan</x:String>
+                            <x:String>Ember Spirit</x:String>
+                            <x:String>Enchantress</x:String>
+                            <x:String>Enigma</x:String>
+                            <x:String>Faceless Void</x:String>
+                            <x:String>Grimstroke</x:String>
+                            <x:String>Gyrocopter</x:String>
+                            <x:String>Huskar</x:String>
+                            <x:String>Invoker</x:String>
+                            <x:String>Io</x:String>
+                            <x:String>Jakiro</x:String>
+                            <x:String>Juggernaut</x:String>
+                            <x:String>Keeper of the Light</x:String>
+                            <x:String>Kunkka</x:String>
+                            <x:String>Legion Commander</x:String>
+                            <x:String>Leshrac</x:String>
+                            <x:String>Lich</x:String>
+                            <x:String>Lifestealer</x:String>
+                            <x:String>Lina</x:String>
+                            <x:String>Lion</x:String>
+                            <x:String>Lone Druid</x:String>
+                            <x:String>Luna</x:String>
+                            <x:String>Lycan</x:String>
+                            <x:String>Magnus</x:String>
+                            <x:String>Mars</x:String>
+                            <x:String>Medusa</x:String>
+                            <x:String>Meepo</x:String>
+                            <x:String>Mirana</x:String>
+                            <x:String>Monkey King</x:String>
+                            <x:String>Morphling</x:String>
+                            <x:String>Naga Siren</x:String>
+                            <x:String>Natures Prophet</x:String>
+                            <x:String>Necrophos</x:String>
+                            <x:String>Night Stalker</x:String>
+                            <x:String>Nyx Assassin</x:String>
+                            <x:String>Ogre Magi</x:String>
+                            <x:String>Omniknight</x:String>
+                            <x:String>Oracle</x:String>
+                            <x:String>Outworld Devourer</x:String>
+                            <x:String>Pangolier</x:String>
+                            <x:String>Phantom Assassin</x:String>
+                            <x:String>Phantom Lancer</x:String>
+                            <x:String>Phoenix</x:String>
+                            <x:String>Puck</x:String>
+                            <x:String>Pudge</x:String>
+                            <x:String>Pugna</x:String>
+                            <x:String>Queen Of Pain</x:String>
+                            <x:String>Razor</x:String>
+                            <x:String>Riki</x:String>
+                            <x:String>Rubick</x:String>
+                            <x:String>Sand King</x:String>
+                            <x:String>Shadow Demon</x:String>
+                            <x:String>Shadow Fiend</x:String>
+                            <x:String>Shadow Shaman</x:String>
+                            <x:String>Silencer</x:String>
+                            <x:String>Skywrath Mage</x:String>
+                            <x:String>Slardar</x:String>
+                            <x:String>Slark</x:String>
+                            <x:String>Snapfire</x:String>
+                            <x:String>Sniper</x:String>
+                            <x:String>Spectre</x:String>
+                            <x:String>Spirit Breaker</x:String>
+                            <x:String>Storm Spirit</x:String>
+                            <x:String>Sven</x:String>
+                            <x:String>Techies</x:String>
+                            <x:String>Templar Assassin</x:String>
+                            <x:String>Terrorblade</x:String>
+                            <x:String>Tidehunter</x:String>
+                            <x:String>Timbersaw</x:String>
+                            <x:String>Tinker</x:String>
+                            <x:String>Tiny</x:String>
+                            <x:String>Treant Protector</x:String>
+                            <x:String>Troll Warlord</x:String>
+                            <x:String>Tusk</x:String>
+                            <x:String>Underlord</x:String>
+                            <x:String>Undying</x:String>
+                            <x:String>Ursa</x:String>
+                            <x:String>Vengeful Spirit</x:String>
+                            <x:String>Venomancer</x:String>
+                            <x:String>Viper</x:String>
+                            <x:String>Visage</x:String>
+                            <x:String>Void Spirit</x:String>
+                            <x:String>Warlock</x:String>
+                            <x:String>Weaver</x:String>
+                            <x:String>Windranger</x:String>
+                            <x:String>Winter Wyvern</x:String>
+                            <x:String>Witch Doctor</x:String>
+                            <x:String>Wraith King</x:String>
+                            <x:String>Zeus</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Role Played: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Picker x:Name="role" WidthRequest="100" TextColor="White">
+                        <Picker.Items>
+                            <x:String>Hard Carry</x:String>
+                            <x:String>Middle</x:String>
+                            <x:String>Offlane</x:String>
+                            <x:String>Soft Support</x:String>
+                            <x:String>Hard Support</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Kills: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="kills" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Assists: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="assists" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Deaths: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="deaths" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Last Hits: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="lastHits" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Denies: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="denies" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Hero Damage: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="heroDamage" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Building Damage: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="buildingDamage" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="GPM: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="gpm" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="XPM: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="xpm" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Healing Done: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="healing" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Support Contribution: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="support" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Stacks: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Entry x:Name="stacks" WidthRequest="100" TextColor="White"/>
+                </StackLayout>
+                <Button Text="Submit" x:Name="submit" Clicked="submit_Clicked" VerticalOptions="EndAndExpand" BackgroundColor="#BA4A00" TextColor="White" CornerRadius="8" Margin="0,10,0,10"/>
+                <Button Text="Submit From MatchID" x:Name="submitMatchId" Clicked="submitMatchId_Clicked" VerticalOptions="EndAndExpand" BackgroundColor="#BA4A00" TextColor="White" CornerRadius="8" Margin="0,0,0,10"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

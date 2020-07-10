@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DotaHelp.statAverages"
+             BackgroundColor="#34495E">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Center" Padding="0,40,0,0">
+                <Image x:Name="logo" Source= "DOTAHelpLogoCenter.png"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Stats: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="YourAverages" Text="Your Averages" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="Average" Text="Global Averages" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Kills: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourKills" Text="kills" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="killsAverage" Text="9" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Assists: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourAssists" Text="assists" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="assistsAverage" Text="8" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Deaths: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourDeaths" Text="deaths" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="deathsAverage" Text="5" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Last Hits: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourLastHits" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="lastHitsAverage" Text="286" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Denies: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourDenies" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="deniesAverage" Text="13" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Hero Damage: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourHeroDamage" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="heroDamageAverage" Text="17680" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Building Damage: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourBuildingDamage" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="buildingDamageAverage" Text="4852" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="GPM: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourGpm" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="gpmAverage" Text="517" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="XPM: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourXpm" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="xpmAverage" Text="651" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Healing Done: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourHealing" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="healingAverage" Text="1574" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Support Contribution: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourSupport" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="supportAverage" Text="1455" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Stacks: " VerticalOptions="End" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="yourStacks" WidthRequest="100" TextColor="White" FontSize="16"/>
+                    <Label x:Name="stacksAverage" Text="4" WidthRequest="100" TextColor="White" FontSize="16"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

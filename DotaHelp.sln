@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaHelp.Android", "DotaHelp\DotaHelp.Android\DotaHelp.Android.csproj", "{ED45D37B-3F64-4081-899D-DC4F3FF35598}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaHelp", "DotaHelp\DotaHelp\DotaHelp.csproj", "{BAE5C63A-7FF8-424A-BD63-5D1F9FD34044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED45D37B-3F64-4081-899D-DC4F3FF35598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED45D37B-3F64-4081-899D-DC4F3FF35598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED45D37B-3F64-4081-899D-DC4F3FF35598}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ED45D37B-3F64-4081-899D-DC4F3FF35598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED45D37B-3F64-4081-899D-DC4F3FF35598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED45D37B-3F64-4081-899D-DC4F3FF35598}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BAE5C63A-7FF8-424A-BD63-5D1F9FD34044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE5C63A-7FF8-424A-BD63-5D1F9FD34044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE5C63A-7FF8-424A-BD63-5D1F9FD34044}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BAE5C63A-7FF8-424A-BD63-5D1F9FD34044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE5C63A-7FF8-424A-BD63-5D1F9FD34044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE5C63A-7FF8-424A-BD63-5D1F9FD34044}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE5027B0-2042-490A-ADA0-2E85E1FEEBFE}
+	EndGlobalSection
+EndGlobal
