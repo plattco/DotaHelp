@@ -15,34 +15,34 @@ namespace DotaHelp
         public GuidesPage()
         {
             InitializeComponent();
-            var browser1 = new WebView
+            var browser1 = new WebView // puts a web preview in the app with below page
             {
                 Source = "https://gosu.ai/blog/dota2/how-to-get-better-as-a-carry/"
             };
         }
 
-        private void carry_Clicked(object sender, EventArgs e)
+        private void carry_Clicked(object sender, EventArgs e) // takes the user to the appropriate webpage
         {
             Device.OpenUri(new Uri("https://gosu.ai/blog/dota2/how-to-get-better-as-a-carry/"));
         }
 
-        private void beginners_Clicked(object sender, EventArgs e)
+        private void beginners_Clicked(object sender, EventArgs e) // takes the user to the appropriate webpage
         {
             Device.OpenUri(new Uri("https://gosu.ai/blog/dota2/best-dota-hero-beginners/"));
         }
 
-        private void brood_Clicked(object sender, EventArgs e)
+        private void brood_Clicked(object sender, EventArgs e) // takes the user to the appropriate webpage
         {
             Device.OpenUri(new Uri("https://gosu.ai/blog/dota2/gosu-ai-guides-broodmather/"));
         
         }
 
-        private void kunkka_Clicked(object sender, EventArgs e)
+        private void kunkka_Clicked(object sender, EventArgs e) // takes the user to the appropriate webpage
         {
             Device.OpenUri(new Uri("https://gosu.ai/blog/dota2/gosu-ai-guides-kunkka/"));
         }
 
-        private void jugg_Clicked(object sender, EventArgs e)
+        private void jugg_Clicked(object sender, EventArgs e) // takes the user to the appropriate webpage
         {
             Device.OpenUri(new Uri("https://gosu.ai/blog/dota2/gosu-ai-guides-juggernaut-7-26/"));
         }

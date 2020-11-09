@@ -6,7 +6,7 @@ using SQLite;
 
 namespace DotaHelp
 {
-    [Table("match")]
+    [Table("match")] // this one is for building a players match statistics via json from api call, I need to build one that sorts the players first so I can access the correct players "match"
     public class Match
     { 
       [PrimaryKey, AutoIncrement]

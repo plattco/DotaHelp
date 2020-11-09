@@ -17,15 +17,15 @@ namespace DotaHelp
     {
         public String playerId;
         public HttpClient client = new HttpClient();
-        public Averages avg = new Averages();
+        public Averages avg = new Averages(); // computes the average stats
         public EntryPage()
         {
             InitializeComponent();
             playerCheck.IsChecked = Preferences.Get("savePlayer", playerCheck.IsChecked);
-            player.Text = Preferences.Get("saveThePlayer", "");
+            player.Text = Preferences.Get("saveThePlayer", ""); // save the playerId for use in the future
         }
 
-        public string createMatchQuery(string matchId)
+        public string createMatchQuery(string matchId) // creates the match query for the api, finds all stats of all players from matchId
         {
             string requestUri = "https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/";
             requestUri += $"?match_id={matchId}";
@@ -33,7 +33,7 @@ namespace DotaHelp
             return requestUri;
         }
 
-        public async Task<string> GetMatchQueryResult(string matchId)
+        public async Task<string> GetMatchQueryResult(string matchId) // puts the match query json results into a string for evaluation
         {
             string id = match.Text;
             string query = createMatchQuery(id);
@@ -55,7 +55,8 @@ namespace DotaHelp
             return result;
         }
 
-        public void ProcessMatchQuery(string id)
+        // inputs all of the data via manual entry or api from matchId. I need to implement a choice of which for the user and two cases here
+        public void ProcessMatchQuery(string id) 
         {
             string response = GetMatchQueryResult(id).Result;
             Match match = JsonConvert.DeserializeObject<Match>(response);
@@ -86,7 +87,8 @@ namespace DotaHelp
             DB.conn.Insert(matches);
         }
 
-            public void submit_Clicked(object sender, EventArgs e)
+        // makes sure everything is populated and doesn't crash. In the future I need to throw an error here to the user if they choose manual entry.
+        public void submit_Clicked(object sender, EventArgs e) 
         {
             if (stacks.Text == null)
             {
@@ -180,20 +182,20 @@ namespace DotaHelp
             avg.stacksAverage = Int32.Parse(stacks.Text);
         }
 
-        private void submitMatchId_Clicked(object sender, EventArgs e)
+        private void submitMatchId_Clicked(object sender, EventArgs e) // processes the match from playerId/manual input
         {
             string id = match.Text;
             ProcessMatchQuery(id);
         }
 
-        private void playerCheck_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        private void playerCheck_CheckedChanged(object sender, CheckedChangedEventArgs e)  // saves the playerId upon selection
         {
             Preferences.Set("savePlayer", playerCheck.IsChecked);
             Preferences.Set("saveId", player.Text);
             playerId = player.Text;
         }
 
-        private void player_TextChanged(object sender, TextChangedEventArgs e)
+        private void player_TextChanged(object sender, TextChangedEventArgs e) // changes the saved playerId if save is checked
         {
             if (playerCheck.IsChecked)
             {
