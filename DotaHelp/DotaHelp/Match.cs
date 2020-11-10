@@ -13,18 +13,15 @@ namespace DotaHelp
 
     public int Id { get; set; }
 
-        [JsonProperty("")]
         public DateTime datePerformed { get; set; }
-        [JsonProperty("")]
+
+        [JsonProperty("account_id")]
         public string playerId { get; set; }
 
-        [JsonProperty("")]
         public string matchId { get; set; }
 
-        [JsonProperty("hero_id")]
         public string heroPlayed { get; set; }
 
-        [JsonProperty("")]
         public string rolePlayed { get; set; }
 
         [JsonProperty("kills")]
@@ -57,10 +54,8 @@ namespace DotaHelp
         [JsonProperty("hero_healing")]
         public int healingDone { get; set; }
 
-        [JsonProperty("")]
         public int supportCont { get; set; }
 
-        [JsonProperty("")]
         public int stacks { get; set; }
 
     public override string ToString()

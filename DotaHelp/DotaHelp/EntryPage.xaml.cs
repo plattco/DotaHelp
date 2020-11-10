@@ -28,8 +28,8 @@ namespace DotaHelp
         public string createMatchQuery(string matchId) // creates the match query for the api, finds all stats of all players from matchId
         {
             string requestUri = "https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/";
-            requestUri += $"?match_id={matchId}";
-            requestUri += "&key=7EA285CCC3C9E27C6BC230FC5CC48D88";
+            requestUri += $"?match_id={matchId}"; // this isn't adding matchId properly
+            requestUri = requestUri + "&key=7EA285CCC3C9E27C6BC230FC5CC48D88";
             return requestUri;
         }
 
@@ -56,15 +56,44 @@ namespace DotaHelp
         }
 
         // inputs all of the data via manual entry or api from matchId. I need to implement a choice of which for the user and two cases here
-        public void ProcessMatchQuery(string id) 
+        public async Task ProcessMatchQuery(string id) 
         {
-            string response = GetMatchQueryResult(id).Result;
-            Match match = JsonConvert.DeserializeObject<Match>(response);
+            string playerID = player.Text;
+            string response = await GetMatchQueryResult(id);
+            Debug.WriteLine(response);
+            // Match match = JsonConvert.DeserializeObject<Match>(response);
+            ResultContainer result = JsonConvert.DeserializeObject<ResultContainer>(response);
+            var playerFinal = result.Result.players.FirstOrDefault(x => x.playerId == playerID);
+            if(playerFinal == null)
+            {
+                // player not found
+            }
+            Matches matches = new Matches
+            {
+                datePerformed = date.Date,
+                playerId = playerFinal.playerId,
+                matchId = id,
+                heroPlayed = (string)hero.SelectedItem,
+                rolePlayed = (string)role.SelectedItem,
+                kills = playerFinal.kills,
+                assists = playerFinal.assists,
+                deaths = playerFinal.deaths,
+                lastHits = playerFinal.lastHits,
+                denies = playerFinal.denies,
+                heroDamage = playerFinal.heroDamage,
+                buildingDamage = playerFinal.buildingDamage,
+                gpm = playerFinal.gpm,
+                xpm = playerFinal.xpm,
+                healingDone = playerFinal.healingDone,
+                supportCont = Int32.Parse(support.Text),
+                stacks = Int32.Parse(stacks.Text),
+            };
+                DB.conn.Insert(matches);
             // create result object
             // loop through to find correct accountId
             // create "player" object
 
-            Matches matches = new Matches
+            /*Matches matches = new Matches
             {
                 datePerformed = date.Date,
                 playerId = match.playerId,
@@ -83,8 +112,8 @@ namespace DotaHelp
                 healingDone = match.healingDone,
                 supportCont = Int32.Parse(support.Text),
                 stacks = Int32.Parse(stacks.Text),
-            };
-            DB.conn.Insert(matches);
+            };*/
+            // DB.conn.Insert(matches);
         }
 
         // makes sure everything is populated and doesn't crash. In the future I need to throw an error here to the user if they choose manual entry.
@@ -182,10 +211,10 @@ namespace DotaHelp
             avg.stacksAverage = Int32.Parse(stacks.Text);
         }
 
-        private void submitMatchId_Clicked(object sender, EventArgs e) // processes the match from playerId/manual input
+        private async void submitMatchId_Clicked(object sender, EventArgs e) // processes the match from playerId/manual input
         {
             string id = match.Text;
-            ProcessMatchQuery(id);
+            await ProcessMatchQuery(id);
         }
 
         private void playerCheck_CheckedChanged(object sender, CheckedChangedEventArgs e)  // saves the playerId upon selection
