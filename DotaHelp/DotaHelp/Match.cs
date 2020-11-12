@@ -20,7 +20,8 @@ namespace DotaHelp
 
         public string matchId { get; set; }
 
-        public string heroPlayed { get; set; }
+        [JsonProperty("hero_id")]
+        public int heroPlayed { get; set; }
 
         public string rolePlayed { get; set; }
 
@@ -70,7 +71,7 @@ namespace DotaHelp
         {
             datePerformed = DateTime.Parse(toks[0]),
             matchId = toks[1],
-            heroPlayed = toks[2],
+            heroPlayed = Int32.Parse(toks[2]),
             rolePlayed = toks[3],
             kills = Int32.Parse(toks[4]),
             assists = Int32.Parse(toks[5]),

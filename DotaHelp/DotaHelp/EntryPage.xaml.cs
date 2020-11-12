@@ -73,8 +73,8 @@ namespace DotaHelp
                 datePerformed = date.Date,
                 playerId = playerFinal.playerId,
                 matchId = id,
-                heroPlayed = (string)hero.SelectedItem,
-                rolePlayed = (string)role.SelectedItem,
+                heroPlayed = identifyHero(playerFinal.heroPlayed), // need to find a way to fill this
+                rolePlayed = (string)role.SelectedItem, // need to find a way to fill this
                 kills = playerFinal.kills,
                 assists = playerFinal.assists,
                 deaths = playerFinal.deaths,
@@ -85,37 +85,63 @@ namespace DotaHelp
                 gpm = playerFinal.gpm,
                 xpm = playerFinal.xpm,
                 healingDone = playerFinal.healingDone,
-                supportCont = Int32.Parse(support.Text),
-                stacks = Int32.Parse(stacks.Text),
+                supportCont = Int32.Parse(support.Text), // need to find a way to fill this
+                stacks = Int32.Parse(stacks.Text), // need to find a way to fill this
             };
                 DB.conn.Insert(matches);
-            // create result object
-            // loop through to find correct accountId
-            // create "player" object
-
-            /*Matches matches = new Matches
-            {
-                datePerformed = date.Date,
-                playerId = match.playerId,
-                matchId = id,
-                heroPlayed = (string)hero.SelectedItem,
-                rolePlayed = (string)role.SelectedItem,
-                kills = match.kills,
-                assists = match.assists,
-                deaths = match.deaths,
-                lastHits = match.lastHits,
-                denies = match.denies,
-                heroDamage = match.heroDamage,
-                buildingDamage = match.buildingDamage,
-                gpm = match.gpm,
-                xpm = match.xpm,
-                healingDone = match.healingDone,
-                supportCont = Int32.Parse(support.Text),
-                stacks = Int32.Parse(stacks.Text),
-            };*/
-            // DB.conn.Insert(matches);
         }
 
+        // identifies the hero they played via hero_id and returns the localized name of the hero
+        // I need to complete this for every hero
+        public string identifyHero(int heroId)
+        {
+            string heroPlayed ="";
+            if(heroId == 1)
+            {
+                heroPlayed = "Anti Mage";
+            }
+            if (heroId == 2)
+            {
+                heroPlayed = "Axe";
+            }
+            if (heroId == 3)
+            {
+                heroPlayed = "Bane";
+            }
+            if (heroId == 4)
+            {
+                heroPlayed = "Bloodseeker";
+            }
+            if (heroId == 5)
+            {
+                heroPlayed = "Crystal Maiden";
+            }
+            if (heroId == 6)
+            {
+                heroPlayed = "Drow Ranger";
+            }
+            if (heroId == 7)
+            {
+                heroPlayed = "Earth Shaker";
+            }
+            if (heroId == 8)
+            {
+                heroPlayed = "Juggernaut";
+            }
+            if (heroId == 9)
+            {
+                heroPlayed = "Mirana";
+            }
+            if (heroId == 11)
+            {
+                heroPlayed = "Shadow Fiend";
+            }
+            else if(heroId == 23)
+            {
+                heroPlayed = "Kunkka";
+            }
+            return heroPlayed;
+        }
         // makes sure everything is populated and doesn't crash. In the future I need to throw an error here to the user if they choose manual entry.
         public void submit_Clicked(object sender, EventArgs e) 
         {

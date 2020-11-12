@@ -14,7 +14,6 @@ namespace DotaHelp
 
         public int Id { get; set; }
 
-        
         public DateTime datePerformed { get; set; }
 
         public string playerId { get; set; }
