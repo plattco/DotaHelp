@@ -132,14 +132,99 @@ namespace DotaHelp
             {
                 heroPlayed = "Mirana";
             }
+            if(heroId == 10)
+            {
+                heroPlayed = "Morphling";
+            }
             if (heroId == 11)
             {
                 heroPlayed = "Shadow Fiend";
             }
-            else if(heroId == 23)
+            if (heroId == 12)
+            {
+                heroPlayed = "Phantom Lancer";
+            }
+            if (heroId == 13)
+            {
+                heroPlayed = "Puck";
+            }
+            if (heroId == 14)
+            {
+                heroPlayed = "Pudge";
+            }
+            if (heroId == 15)
+            {
+                heroPlayed = "Razor";
+            }
+            if (heroId == 16)
+            {
+                heroPlayed = "Sand King";
+            }
+            if (heroId == 17)
+            {
+                heroPlayed = "Storm Spirit";
+            }
+            if (heroId == 18)
+            {
+                heroPlayed = "Sven";
+            }
+            if (heroId == 19)
+            {
+                heroPlayed = "Tiny";
+            }
+            if (heroId == 20)
+            {
+                heroPlayed = "Vengeful Spirit";
+            }
+            if (heroId == 21)
+            {
+                heroPlayed = "Windranger";
+            }
+            if (heroId == 22)
+            {
+                heroPlayed = "Zeus";
+            }
+            if (heroId == 23)
             {
                 heroPlayed = "Kunkka";
             }
+            if (heroId == 25)
+            {
+                heroPlayed = "Lina";
+            }
+            if (heroId == 26)
+            {
+                heroPlayed = "Lion";
+            }
+            if (heroId == 27)
+            {
+                heroPlayed = "Shadow Shaman";
+            }
+            if (heroId == 28)
+            {
+                heroPlayed = "Slardar";
+            }
+            if (heroId == 29)
+            {
+                heroPlayed = "Tidehunter";
+            }
+            if (heroId == 30)
+            {
+                heroPlayed = "Witch Doctor";
+            }
+            if (heroId == 31)
+            {
+                heroPlayed = "Lich";
+            }
+            if (heroId == 32)
+            {
+                heroPlayed = "Riki";
+            }
+            if (heroId == 33)
+            {
+                heroPlayed = "Enigma";
+            }
+
             return heroPlayed;
         }
         // makes sure everything is populated and doesn't crash. In the future I need to throw an error here to the user if they choose manual entry.
