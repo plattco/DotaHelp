@@ -224,6 +224,102 @@ namespace DotaHelp
             {
                 heroPlayed = "Enigma";
             }
+            if (heroId == 34)
+            {
+                heroPlayed = "Tinker";
+            }
+            if (heroId == 35)
+            {
+                heroPlayed = "Sniper";
+            }
+            if (heroId == 36)
+            {
+                heroPlayed = "Necrophos";
+            }
+            if (heroId == 37)
+            {
+                heroPlayed = "Warlock";
+            }
+            if (heroId == 38)
+            {
+                heroPlayed = "Beastmaster";
+            }
+            if (heroId == 39)
+            {
+                heroPlayed = "Queen of Pain";
+            }
+            if (heroId == 40)
+            {
+                heroPlayed = "Venomancer";
+            }
+            if (heroId == 41)
+            {
+                heroPlayed = "Faceless Void";
+            }
+            if (heroId == 42)
+            {
+                heroPlayed = "Wraith King";
+            }
+            if (heroId == 43)
+            {
+                heroPlayed = "Death Prophet";
+            }
+            if (heroId == 44)
+            {
+                heroPlayed = "Phantom Assassin";
+            }
+            if (heroId == 45)
+            {
+                heroPlayed = "Pugna";
+            }
+            if (heroId == 46)
+            {
+                heroPlayed = "Templar Assassin";
+            }
+            if (heroId == 47)
+            {
+                heroPlayed = "Viper";
+            }
+            if (heroId == 48)
+            {
+                heroPlayed = "Luna";
+            }
+            if (heroId == 49)
+            {
+                heroPlayed = "Dragon Knight";
+            }
+            if (heroId == 50)
+            {
+                heroPlayed = "Dazzle";
+            }
+            if (heroId == 51)
+            {
+                heroPlayed = "Clockwerk";
+            }
+            if (heroId == 52)
+            {
+                heroPlayed = "Leshrac";
+            }
+            if (heroId == 53)
+            {
+                heroPlayed = "Nature's Prophet";
+            }
+            if (heroId == 54)
+            {
+                heroPlayed = "Lifestealer";
+            }
+            if (heroId == 55)
+            {
+                heroPlayed = "Dark Seer";
+            }
+            if (heroId == 56)
+            {
+                heroPlayed = "Clinkz";
+            }
+            if (heroId == 57)
+            {
+                heroPlayed = "Omniknight";
+            }
 
             return heroPlayed;
         }
