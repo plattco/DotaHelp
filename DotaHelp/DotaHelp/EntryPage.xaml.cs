@@ -68,6 +68,10 @@ namespace DotaHelp
             {
                 // player not found
             }
+            if (DB.conn.Find(playerFinal.matchId) != null)
+            {
+                // match already submitted
+            }
             Matches matches = new Matches
             {
                 datePerformed = date.Date,

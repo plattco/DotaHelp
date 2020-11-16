@@ -12,13 +12,11 @@ namespace DotaHelp
     {
         [PrimaryKey, AutoIncrement]
 
-        public int Id { get; set; }
+        public string matchId { get; set; }
 
         public DateTime datePerformed { get; set; }
 
         public string playerId { get; set; }
-
-        public string matchId { get; set; }
 
         public string heroPlayed { get; set; }
 
