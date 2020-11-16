@@ -320,8 +320,238 @@ namespace DotaHelp
             {
                 heroPlayed = "Omniknight";
             }
+            if (heroId == 58)
+            {
+                heroPlayed = "Enchantress";
+            }
+            if (heroId == 59)
+            {
+                heroPlayed = "Huskar";
+            }
+            if (heroId == 60)
+            {
+                heroPlayed = "Night Stalker";
+            }
+            if (heroId == 61)
+            {
+                heroPlayed = "Broodmother";
+            }
+            if (heroId == 62)
+            {
+                heroPlayed = "Bounty Hunter";
+            }
+            if (heroId == 63)
+            {
+                heroPlayed = "WWeaver";
+            }
+            if (heroId == 64)
+            {
+                heroPlayed = "Jakiro";
+            }
+            if (heroId == 65)
+            {
+                heroPlayed = "Batrider";
+            }
+            if (heroId == 66)
+            {
+                heroPlayed = "Chen";
+            }
+            if (heroId == 67)
+            {
+                heroPlayed = "Spectre";
+            }
+            if (heroId == 68)
+            {
+                heroPlayed = "Ancient Apparition";
+            }
+            if (heroId == 69)
+            {
+                heroPlayed = "Doom";
+            }
+            if (heroId == 70)
+            {
+                heroPlayed = "Ursa";
+            }
+            if (heroId == 71)
+            {
+                heroPlayed = "Spirit Breaker";
+            }
+            if (heroId == 72)
+            {
+                heroPlayed = "Gyrocopter";
+            }
+            if (heroId == 73)
+            {
+                heroPlayed = "Alchemist";
+            }
+            if (heroId == 74)
+            {
+                heroPlayed = "Invoker";
+            }
+            if (heroId == 75)
+            {
+                heroPlayed = "Silencer";
+            }
+            if (heroId == 76)
+            {
+                heroPlayed = "Outworld Devourer";
+            }
+            if (heroId == 77)
+            {
+                heroPlayed = "Lycan";
+            }
+            if (heroId == 78)
+            {
+                heroPlayed = "Brewmaster";
+            }
+            if (heroId == 79)
+            {
+                heroPlayed = "Shadow Demon";
+            }
+            if (heroId == 80)
+            {
+                heroPlayed = "Lone Druid";
+            }
+            if (heroId == 81)
+            {
+                heroPlayed = "Chaos Knight";
+            }
+            if (heroId == 82)
+            {
+                heroPlayed = "Meepo";
+            }
+            if (heroId == 83)
+            {
+                heroPlayed = "Treant Protector";
+            }
+            if (heroId == 84)
+            {
+                heroPlayed = "Ogre Magi";
+            }
+            if (heroId == 85)
+            {
+                heroPlayed = "Undying";
+            }
+            if (heroId == 86)
+            {
+                heroPlayed = "Rubick";
+            }
+            if (heroId == 87)
+            {
+                heroPlayed = "Disruptor";
+            }
+            if (heroId == 88)
+            {
+                heroPlayed = "Nyx Assassin";
+            }
+            if (heroId == 89)
+            {
+                heroPlayed = "Naga Siren";
+            }
+            if (heroId == 90)
+            {
+                heroPlayed = "Keeper Of The Light";
+            }
+            if (heroId == 91)
+            {
+                heroPlayed = "IO";
+            }
+            if (heroId == 92)
+            {
+                heroPlayed = "Visage";
+            }
+            if (heroId == 93)
+            {
+                heroPlayed = "Slark";
+            }
+            if (heroId == 94)
+            {
+                heroPlayed = "Medusa";
+            }
+            if (heroId == 95)
+            {
+                heroPlayed = "Troll Warlord";
+            }
+            if (heroId == 96)
+            {
+                heroPlayed = "Gyrocopter";
+            }
+            if (heroId == 97)
+            {
+                heroPlayed = "Magnus";
+                if (heroId == 98)
+                {
+                    heroPlayed = "Timbersaw";
+                }
+                if (heroId == 99)
+                {
+                    heroPlayed = "Bristleback";
+                }
+                if (heroId == 100)
+                {
+                    heroPlayed = "Tusk";
+                }
+                if (heroId == 101)
+                {
+                    heroPlayed = "Skywrath Mage";
+                }
+                if (heroId == 102)
+                {
+                    heroPlayed = "Abbadon";
+                }
+                if (heroId == 103)
+                {
+                    heroPlayed = "Elder Titan";
+                }
+                if (heroId == 104)
+                {
+                    heroPlayed = "Legion Commander";
+                }
+                if (heroId == 105)
+                {
+                    heroPlayed = "Techies";
+                }
+                if (heroId == 106)
+                {
+                    heroPlayed = "Ember Spirit";
+                }
+                if (heroId == 107)
+                {
+                    heroPlayed = "Earth Spirit";
+                }
+                if (heroId == 108)
+                {
+                    heroPlayed = "Underlord";
+                }
+                if (heroId == 109)
+                {
+                    heroPlayed = "Terrorblade";
+                }
+                if (heroId == 110)
+                {
+                    heroPlayed = "Phoenix";
+                }
+                if (heroId == 111)
+                {
+                    heroPlayed = "Oracle";
+                }
+                if (heroId == 112)
+                {
+                    heroPlayed = "Winter Wyvern";
+                }
+                if (heroId == 113)
+                {
+                    heroPlayed = "Arc Warden";
+                }
+                else
+                {
+                    heroPlayed = "Not Found";
+                    return heroPlayed;
+                }
+            }
 
-            return heroPlayed;
+
+                return heroPlayed;
         }
         // makes sure everything is populated and doesn't crash. In the future I need to throw an error here to the user if they choose manual entry.
         public void submit_Clicked(object sender, EventArgs e) 
